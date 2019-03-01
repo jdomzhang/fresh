@@ -1,6 +1,4 @@
 # Fresh
-[![Join the chat at https://gitter.im/pilu/fresh](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pilu/fresh?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status](https://travis-ci.org/pilu/fresh.svg?branch=master)](https://travis-ci.org/pilu/fresh)
 
 Fresh is a command line tool that builds and (re)starts your web application everytime you save a Go or template file.
 
@@ -36,6 +34,7 @@ Here is a sample config file with the default settings:
     tmp_path:          ./tmp
     build_name:        runner-build
     build_log:         runner-build-errors.log
+    run_args:
     valid_ext:         .go, .tpl, .tmpl, .html
     no_rebuild_ext:    .tpl, .tmpl, .html
     ignored:           assets, tmp
@@ -47,14 +46,13 @@ Here is a sample config file with the default settings:
     log_color_watcher: magenta
     log_color_app:
 
-
 ## Author
 
-* [Andrea Franz](http://gravityblast.com)
+-   [Andrea Franz](http://gravityblast.com)
 
 ## More
 
-* [Mailing List](https://groups.google.com/d/forum/golang-fresh)
+-   [Mailing List](https://groups.google.com/d/forum/golang-fresh)
 
 ## Contributing
 
@@ -63,4 +61,3 @@ Here is a sample config file with the default settings:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
-

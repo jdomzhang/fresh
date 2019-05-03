@@ -1,4 +1,4 @@
-module fresh
+module github.com/jdomzhang/fresh
 
 go 1.12
 

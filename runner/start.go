@@ -90,7 +90,7 @@ func initLogFuncs() {
 	watcherLog = newLogFunc("watcher")
 	runnerLog = newLogFunc("runner")
 	buildLog = newLogFunc("build")
-	appLog = newLogFunc("app")
+	appLog = newLogFunc("")
 }
 
 func setEnvVars() {

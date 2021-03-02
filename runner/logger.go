@@ -13,6 +13,12 @@ type logFunc func(string, ...interface{})
 var logger = logPkg.New(colorable.NewColorableStderr(), "", 0)
 
 func newLogFunc(prefix string) func(string, ...interface{}) {
+	if prefix == "" {
+		return func(format string, v ...interface{}) {
+			fmt.Printf(format, v...)
+		}
+	}
+
 	color, clear := "", ""
 	if settings["colors"] == "1" {
 		color = fmt.Sprintf("\033[%sm", logColor(prefix))

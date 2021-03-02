@@ -115,7 +115,11 @@ func root() string {
 }
 
 func mainPath() string {
-	return settings["main_path"]
+	mp := settings["main_path"]
+	if mp == "" {
+		return root()
+	}
+	return mp
 }
 
 func tmpPath() string {
